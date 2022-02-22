@@ -1,0 +1,15 @@
+1.Create a form with input fields
+username
+email
+password
+
+2.Validation:
+username:no special characters or numbers,only alphabets 
+Email:username=5,domain=4(user name have numbers if required)
+password:atleast password should contain 8 character
+password again:it should match the existing password or it will appear as password do not match.
+3.Button:Submit,Clear
+4.create class and constructors
+create method for validation
+5.once submit is given,it checks the validation,if anything is wrong it shows the error.
+  error messages will be displayed on the screen
