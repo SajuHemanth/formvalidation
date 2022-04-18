@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Registraion Form</title>
+  </head>
+  <body class="container background">
+    <div class="card">
+      <h1 class="form-header text-center">
+        Employee Registration Form
+      </h1>
+      <div class="card-body main-body">
+        <div class="container">
+          <div style="margin:0 5% 0">
+            <a class="btn  nav-btn btn-active color-change"onclick="jumpForm(1)">Basic</a>
+            <a class="btn nav-btn disable-ancor" onclick="jumpForm(2)">Other</a>
+            <a class="btn nav-btn disable-ancor" onclick="jumpForm(3)">Work</a>
+            <a class="btn nav-btn disable-ancor" onclick="jumpForm(4)">Education</a>
+            <a class="btn nav-btn disable-ancor" onclick="jumpForm(5)">Team</a>
+          </div>
+           
+          </div>
+        <form action="#" class="form">
+          <!-- BASIC -->
+          <div class="form-step form-step-active">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="email">Email ID <span class="required" id="emailRequired">*</span> </label>
+                  <input onblur="validateEmail()" class="form-input" type="text" name="email" id="email" />
+                  <p class="error-message" id="emailError"></p>
+                </div>
+              </div>            
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="password">Password <span class="required" id="passwordRequired" >*</span></label>
+                  <input onblur="validatePassword()" class="form-input" type="password" name="password" id="password">
+                  <p class="error-message" id="passwordError"></p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password <span class="required" id="passwordConfirmRequired">*</span> </label>
+                  <input onblur="confirmpassword()" class="form-input" type="password" name="confirm password" id="confirmPassword">
+                  <p class="error-message" id="passwordConfirmError"></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="firstName">First Name <span class="required" id="firstNameRequired">*</span></label>
+                  <input onblur="validateFirstName()" class="form-input" type="text" name="First Name" id="firstName">
+                  <p class="error-message" id="firstNameError"></p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input class="form-input" type="text" name="Last Name" id="lastName">
+                </div>
+              </div>
+            </div>            
+            <div class="row">
+              <div class="col">
+                <a onclick="clickBasicForm()" class="btn btn-right btn-next btn-position-right width-50 ml-auto">Next</a>
+              </div>
+            </div>
+          </div>
+          <!-- Other -->
+          <div class="form-step">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="DOB">Date of Birth</label>
+                  <input class="form-input" type="text" name="Date of Birth" id="DOB">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="Gender">Gender</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Gender" id="Male">
+                    <label class="form-check-label" for="Male">Male</label>
+                    <input class="form-check-input" type="radio" name="Gender" id="Female">
+                    <label class="form-check-label" for="Female">Female</label>
+                    <input class="form-check-input" type="radio" name="Gender" id="Others">
+                    <label class="form-check-label" for="Others">Others</label>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="states">State</label>
+                  <select class="form-select" name="states" id="states">
+                    <option value="Kerala">Tamil Nadu</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Kerala">Karnataka</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  <textarea name="address" id="address" cols="30" rows="4"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="mobilenumber">Mobile Number</label>
+                  <input class="form-input" type="text" inputmode="numeric" name="mobilenumber" id="mobilenumber">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a class="btn btn-left btn-prev disable-ancor btn-position-left width-50 ml-auto">Previous</a>
+                <a onclick="clickOtherForm()" class="btn btn-right btn-next disable-ancor btn-position-right width-50 ml-auto">Next</a>
+              </div>
+            </div>
+          </div>
+          <!-- WORK -->
+          <div class="form-step">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="occupation">Occupation</label>
+                  <input type="text" name="Occupation" id="occupation" class="form-input">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="experience">Over All Years of Experience</label>
+                  <input type="text" name="OYE" id="experience" class="form-input">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a class="btn btn-left btn-prev disable-ancor width-50 ml-auto">Previous</a>
+                <a onclick="clickWorkForm()" class="btn btn-right btn-next disable-ancor btn-position-right width-50 ml-auto">Next</a>
+              </div>
+            </div>
+          </div>
+          <!-- EDUCATION -->
+          <div class="form-step">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="graduation">Graduation</label>
+                  <select class="form-select" name="Graduation" id="graduation">
+                    <option value="SSLC">SSLC</option>
+                    <option value="HSC">HSC</option>
+                    <option value="BE">BE</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="passingout">Year of Passing</label>
+                  <input type="text" name="passingout" id="passingout" class="form-input">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a class="btn btn-left btn-prev disable-ancor width-50 ml-auto">Previous</a>
+                <a onclick="clickEducationForm()" class="btn btn-right btn-next disable-ancor btn-position-right width-50 ml-auto">Next</a>
+              </div>
+            </div>
+          </div>
+          <!-- TEAM -->
+          <div class="form-step">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="practice">Department/Practice</label>
+                  <select class="form-select" name="Practice" id="practice">
+                    <option value="LAMP">LAMP</option>
+                    <option value=".NET">.NET</option>
+                    <option value="Oracle">ORACLE</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div  class="col">
+                <div style="margin: auto; width: 30%;" class="form-group">
+                  <input type="checkbox" name="TandC" id="terms" class="form-check-input">
+                  <label for="terms" class="form-check-label">Agree to Terms & Conditions</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a class="btn btn-left btn-prev disable-ancor width-50 ml-auto">Previous</a>
+                <a onclick="clickTeamForm()" class="btn btn-right btn-next disable-ancor btn-position-right width-50 ml-auto">Submit</a>
+              </div>
+            </div>
+          </div>
+          </form>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>
